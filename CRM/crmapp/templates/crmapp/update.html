@@ -1,0 +1,25 @@
+{% extends 'crmapp/base.html' %}
+{% block content%}
+<div class="col-lg-6 mt-5">
+    <h1 class="mb-2">Update Record</h1>
+    {% if form.errors %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <ul>
+                {% for field, errors in form.errors.items %}
+                    {% for error in errors %}
+                        <li>{{ field }}: {{ error }}</li>
+                    {% endfor %}
+                {% endfor %}
+            </ul>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endif %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_div }}
+        <div class="col-12 mt-3">
+            <button class="btn btn-primary bg-dark" type="submit">Update</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

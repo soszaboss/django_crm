@@ -1,0 +1,28 @@
+{% extends 'crmapp\base.html' %}
+{% block content%}
+<div class="col-lg-6">
+    <div class="card text-lg-start">
+  <div class="card-header text-center">
+    Featured
+  </div>
+  <div class="card-body">
+      {% if customer_record%}
+      <p class="card-text d-flex flex-column justify-content-around mb-3">
+        <div class="mb-3 ms-3"><span><strong>Username</strong>:&emsp;</span>{{ customer_record.username}}</div>
+        <div class="mb-3 ms-3"><span><strong>Name</strong>:&emsp;</span>{{ customer_record.name}}</div>
+        <div class="mb-3 ms-3"><span><strong>Last Name</strong>:&emsp;</span>{{ customer_record.lastname}}</div>
+        <div class="mb-3 ms-3"><span><strong>Email</strong>:&emsp;</span>{{ customer_record.email}}</div>
+        <div class="mb-3 ms-3"><span><strong>Password</strong>:&emsp;</span>{{ customer_record.password}}</div>
+<!--        <div class="mb-3"><span><strong>ID</strong>:&emsp;</span>{{ customer_record.id}}</div>-->
+      </p>
+
+      {% endif %}
+      <div class="d-flex justify-content-evenly w-50">
+          <a href="{% url 'home' %}" class="btn btn-primary d-inline-block">Back</a>
+          <a href="{% url 'delete'  customer_record.id %}" class="btn btn-danger d-inline-block">Delete</a>
+          <a href="{% url 'update'  customer_record.id %}" class="btn btn-success d-inline-block">Update</a>
+      </div>
+  </div>
+</div>
+</div>
+{% endblock %}

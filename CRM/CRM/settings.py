@@ -84,6 +84,7 @@ DATABASES = {
         "PORT": "5432",
     }
 }
+# settings.py
 
 
 # Password validation
