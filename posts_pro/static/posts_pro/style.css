@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+html, body{
+    height: 100%;
+}
+
+body {
+    background-color: #dde3fb;
+    display: grid;
+    place-items: center;
+    height: 400px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-family: 'Manrope', sans-serif;
+}
+
+#head1{
+    color: #b5b4b9;
+}
+
+p{
+    color: #837e92;
+}
+
+.count{
+}
