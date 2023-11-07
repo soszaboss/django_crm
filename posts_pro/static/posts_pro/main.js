@@ -3,6 +3,7 @@ const postEl = document.querySelector('#post-el');
 const spinner = document.querySelector('#spinner');
 const loadBtn = document.querySelector('#load-btn');
 const endBox = document.querySelector('#end-box');
+const displayNone = "d-none";
 
 // Function to set the like/unlike buttons based on the provided parameters
 const likedUnlikedNull = (liked = false, unliked = false, id) => {
@@ -74,6 +75,10 @@ return setTimeout(() => {
             e.preventDefault();
         });
         console.log(form);
+        const biHandThumbsUp = document.getElementById(`bi-hand-thumbs-up-${id}`);
+        const biHandThumbsUpFill = document.getElementById(`bi-hand-thumbs-up-fill-${id}`);
+        const biHandThumbsDown = document.getElementById(`bi-hand-thumbs-down-${id}`);
+        const biHandThumbsDownFill = document.getElementById(`bi-hand-thumbs-down-fill-${id}`);
         const postId = form.getAttribute('data-form-id');
         const btnLikeClicked = document.getElementById(`like-${postId}`);
         const btnUnlikeClicked = document.getElementById(`unlike-${postId}`);
